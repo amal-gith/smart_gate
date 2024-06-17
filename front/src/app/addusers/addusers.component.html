@@ -1,0 +1,45 @@
+<section class="bg-white dark:bg-gray-900" >
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16 ">
+        <h2 class=" flex justify-center mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new User</h2>
+        <form [formGroup]="userform" >
+            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 "  >
+                <div class="sm:col-span-2">
+                    <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">FullName</label>
+                    <input  formControlName="fullname" type="text" name="fullname" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="FullName" required>
+                    <div  *ngIf="userform.get('fullname')?.invalid && userform.get('fullname')?.touched" class="text-red-500">Full Name is required</div>
+                </div>
+                
+<!------------------------------------------>
+
+<!------------------------------------------>
+
+
+                <div class="w-full" >
+                    <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                    <input formControlName="email" type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Email" required="">
+                    <div  *ngIf="userform.get('email')?.invalid && userform.get('email')?.touched" class="text-red-500">  Email  is required </div>
+
+                </div>
+                <div class="w-full">
+                    <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+                    <input formControlName="address" type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Adresse" required="">
+                    <div  *ngIf="userform.get('address')?.invalid && userform.get('address')?.touched" class="text-red-500">Address is required</div>
+
+                </div>
+                <div>
+                    <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CIN </label>
+                <input formControlName="cin" name="cin" id="cin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="CIN" required="">
+                <div  *ngIf="userform.get('cin')?.invalid && userform.get('cin')?.touched" class="text-red-500">cin is required</div>
+  
+            </div>
+               
+            </div>
+            
+            
+        </form>
+        
+    </div>
+    <div class=" flex justify-center">
+    <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add User</button>
+</div> 
+</section>
