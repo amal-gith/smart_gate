@@ -4,8 +4,9 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { AddusersComponent } from './addusers/addusers.component';
-import { AdddevicesComponent } from './adddevices/adddevices.component';
+//import { AddDeviceComponent } from './adddevices/adddevices.component';
 import { DevicesComponent } from './devices/devices.component';
+import { AdddevicesComponent } from './adddevices/adddevices.component';
 
 const routes: Routes = [
   

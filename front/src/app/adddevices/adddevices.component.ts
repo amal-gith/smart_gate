@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+interface Device {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-adddevices',
@@ -7,18 +11,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./adddevices.component.css']
 })
 export class AdddevicesComponent {
-  userform: FormGroup;
-  constructor() {
-    this.userform = new FormGroup({
-      fullname: new FormControl('', [Validators.required]),
-      cin: new FormControl('', [Validators.required , Validators.maxLength(8)]),
-      email: new FormControl('', [Validators.required,Validators.email]),
-      address: new FormControl('', [Validators.required])
+  devices: Device[] = [
+    { value: '0', viewValue: 'Smart Agriculture' },
+    { value: '1', viewValue: 'AquaOptim' },
+    { value: '2', viewValue: 'Healthcare' },
+    { value: '3', viewValue: 'Industriel' },
+    { value: '4', viewValue: 'Others' }
+  ];
 
-    });
-  }
-  ngOnInit(): void {
-    
-  }
+  seclevel: string = '';  // Initialisation de la propriété
+  levels: string[] = ['High', 'Low', 'None'];
 
+  perlevel: string = '';
+  periorities: string[] = ['High', 'Low', 'None'];
 }

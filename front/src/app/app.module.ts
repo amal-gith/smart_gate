@@ -13,11 +13,12 @@ import { AdddevicesComponent } from './adddevices/adddevices.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DevicesComponent } from './devices/devices.component';
-
-
-
-
-
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
   @NgModule({
     declarations: [
       AppComponent,
@@ -37,7 +38,9 @@ import { DevicesComponent } from './devices/devices.component';
       MatSlideToggleModule,
       DashboardComponent,
       ReactiveFormsModule,
-      MatDialogModule
+      MatDialogModule,
+      MatFormFieldModule, MatInputModule, MatSelectModule,FormsModule,MatRadioModule, FormsModule,
+      MatRadioModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
