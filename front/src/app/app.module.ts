@@ -1,48 +1,63 @@
-  import { NgModule } from '@angular/core';
-  import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-  import { AppRoutingModule } from './app-routing.module';
-  import { AppComponent } from './app.component';
-  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-  import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-  import { LoginComponent } from './login/login.component';
-  import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { UsersComponent } from './users/users.component';
 import { AddusersComponent } from './addusers/addusers.component';
 import { AdddevicesComponent } from './adddevices/adddevices.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DevicesComponent } from './devices/devices.component';
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-import {MatRadioModule} from '@angular/material/radio';
-  @NgModule({
-    declarations: [
-      AppComponent,
-      UsersComponent,
-      AddusersComponent,
-      AdddevicesComponent,
-      DevicesComponent,
-      //DashboardComponent,
-      //LoginComponent,
-      
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { CardComponent } from './card/card.component';
+import { CpuComponent } from './cpu/cpu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { SettingComponent } from './setting/setting.component';
+import { EnergyComponent } from './energy/energy.component';
+import { DetailsComponent } from './details/details.component';
 
-    ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      MatSlideToggleModule,
-      DashboardComponent,
-      ReactiveFormsModule,
-      MatDialogModule,
-      MatFormFieldModule, MatInputModule, MatSelectModule,FormsModule,MatRadioModule, FormsModule,
-      MatRadioModule,
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-  })
-  export class AppModule { }
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    AddusersComponent,
+    AdddevicesComponent,
+    DevicesComponent,
+    CardComponent,
+    CpuComponent,
+    SettingComponent,
+    EnergyComponent,
+    DetailsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
+    MatRadioModule,
+    DashboardComponent, // Add as import
+    LoginComponent, // Add as import
+    CanvasJSAngularChartsModule,
+    
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

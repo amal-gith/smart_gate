@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AdddevicesComponent } from '../adddevices/adddevices.component';
+import { SettingComponent } from '../setting/setting.component';
 
 @Component({
   selector: 'app-devices',
@@ -13,6 +14,14 @@ export class DevicesComponent {
     this.dialog.open(AdddevicesComponent, {
       width: '600px',
     });
+
+}
+
+
+openSettingDialog() {
+  this.dialog.open(SettingComponent, {
+    width: '600px',
+  });
 
 }
 }

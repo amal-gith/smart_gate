@@ -1,221 +1,74 @@
-<form class="max-w-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="max-w-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
     <h2 class="flex justify-center mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new Device</h2>
     
-    <div class="flex space-x-4">
-        <mat-form-field appearance="fill" class="flex-1">
-            <mat-label>Device ID</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="flex-1">
-            <mat-label>Type of device</mat-label>
-            <mat-select>
-                <ng-container *ngFor="let device of devices">
-                    <mat-option [value]="device.value">{{ device.viewValue }}</mat-option>
-                </ng-container>
-            </mat-select>
-        </mat-form-field>
-        
-    </div>
-    
-    <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type of connectivity</span>    
-    <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-            <div class="flex items-center pl-3">
-                <input id="horizontal-list-radio-license" type="radio" value="Bluetooth" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bluetooth</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-            <div class="flex items-center pl-3">
-                <input id="horizontal-list-radio-id" type="radio" value="Wi-Fi" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Wi-Fi</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-            <div class="flex items-center pl-3">
-                <input id="horizontal-list-radio-military" type="radio" value="LoRa" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label for="horizontal-list-radio-military" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">LoRa</label>
-            </div>
-        </li>
-    </ul>  
-    <!--------------BLE Connection --------------------->
-    <div class="flex space-x-10 max-w-md    ">
-    <mat-form-field  appearance="fill" class=" my-4 flex-1">
-        <mat-label>Mac Address</mat-label>
-        <input matInput>
-    </mat-form-field> 
-   <div class="mt-11 flex"><p><mat-slide-toggle > Connect !</mat-slide-toggle></p></div> 
-    
-    </div>
-        <!--------------Wi-Fi Connection --------------------->
-
-    <div class="flex space-x-10 max-w-md   ">
-        <mat-form-field  appearance="fill" class=" my-4 flex-1">
-            <mat-label>IP Address</mat-label>
-            <input matInput>
-        </mat-form-field> 
-       <div class="mt-11 flex"><p><mat-slide-toggle > Connect !</mat-slide-toggle></p></div> 
-        
+    <div class="h-96 overflow-y-auto">
+      <form>
+        <div class="flex space-x-4">
+            <mat-form-field appearance="fill" class="flex-1">
+                <mat-label>Device ID</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="flex-1">
+                <mat-label>Type of device</mat-label>
+                <mat-select>
+                    <ng-container *ngFor="let device of devices">
+                        <mat-option [value]="device.value">{{ device.viewValue }}</mat-option>
+                    </ng-container>
+                </mat-select>
+            </mat-form-field>
         </div>
-        <!---------------------LoRa Connection ------------------>
-        <div class="flex space-x-10 max-w-md ">
-            <mat-form-field  appearance="fill" class=" my-4 flex-1">
+        
+        <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type of connectivity</span>
+        <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <div class="flex items-center pl-3">
+                    <input id="horizontal-list-radio-license" type="radio" value="Bluetooth" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bluetooth</label>
+                </div>
+            </li>
+            <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <div class="flex items-center pl-3">
+                    <input id="horizontal-list-radio-id" type="radio" value="Wi-Fi" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Wi-Fi</label>
+                </div>
+            </li>
+            <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                <div class="flex items-center pl-3">
+                    <input id="horizontal-list-radio-military" type="radio" value="LoRa" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    <label for="horizontal-list-radio-military" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">LoRa</label>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="flex space-x-10 max-w-md">
+            <mat-form-field appearance="fill" class="my-4 flex-1">
+                <mat-label>Mac Address</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div class="mt-11 flex"><p><mat-slide-toggle>Connect!</mat-slide-toggle></p></div>
+        </div>
+        
+        <div class="flex space-x-10 max-w-md">
+            <mat-form-field appearance="fill" class="my-4 flex-1">
                 <mat-label>IP Address</mat-label>
                 <input matInput>
-            </mat-form-field> 
-           <div class="mt-11 flex"><p><mat-slide-toggle > Connect !</mat-slide-toggle></p></div> 
-            
-            </div>
-  </form>
-    <!------------------------------------->
-  <div class="flex space-x-4 pb-40  ">
-    <div class="py-3 ml-40 ps-80  flex-1 ">
-      <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Security Level</span>    
-      <mat-radio-group 
-          aria-labelledby="example-radio-group-label"
-          class="example-radio-group"
-          [(ngModel)]="seclevel">
-          <mat-radio-button *ngFor="let level of levels" class="example-radio-button" [value]="level">{{ level }}</mat-radio-button>
-      </mat-radio-group>
+            </mat-form-field>
+            <div class="mt-11 flex"><p><mat-slide-toggle>Connect!</mat-slide-toggle></p></div>
+        </div>
+        
+        <div class="flex space-x-10 max-w-md">
+            <mat-form-field appearance="fill" class="my-4 flex-1">
+                <mat-label>IP Address</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div class="mt-11 flex"><p><mat-slide-toggle>Connect!</mat-slide-toggle></p></div>
+        </div>
+        <div class=" justify-center flex">
+            <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add Device</button>
     </div>
-    <div class="py-3 flex-1 pr-20 ">
-      <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Priority Level</span>    
-      <mat-radio-group 
-          aria-labelledby="example-radio-group-label"
-          class="example-radio-group"
-          [(ngModel)]="perlevel">
-          <mat-radio-button *ngFor="let per of periorities" class="example-radio-button" [value]="per">{{ per }}</mat-radio-button>
-      </mat-radio-group>
-      
+      </form>
+ 
     </div>
-    
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<section>
-<form class="max-w-2xl mx-auto px-4 py-8 sm:px-6 lg:px-8" >
-    <h2 class=" flex justify-center mb-4 text-xl font-bold text-gray-900 dark:text-white ">Add a new Device</h2>
-
-    <div class="grid gap-6 mb-6 md:grid-cols-2 py-8 px-4 mx-auto max-w-2xl lg:py-16 ">
-        
-        <div>
-            
-            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Device ID</label>
-            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Device ID" required />
-        </div>
-        <form class="max-w-sm mx-auto">
-            <label for="small" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type of device</label>
-            <select id="small" class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected>Choose type of device</option>
-              <option value="US">United States</option>
-              <option value="CA">Canada</option>
-              <option value="FR">France</option>
-              <option value="DE">Germany</option>
-            </select>
-            </form>
-
-        
-    </div>
-
-
-<span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type of connectivity</span>    
-<ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-        <div class="flex items-center ps-3">
-            <input id="horizontal-list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4  text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500    ">
-            <label for="horizontal-list-radio-license" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bluetooth </label>
-        </div>
-    </li>
-    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-        <div class="flex items-center ps-3">
-            <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="horizontal-list-radio-id" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Wi-Fi</label>
-        </div>
-    </li>
-    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-        <div class="flex items-center ps-3">
-            <input id="horizontal-list-radio-military" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="horizontal-list-radio-military" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">LoRa</label>
-        </div>
-    </li>
-   
-</ul>
-
-<div class="grid gap-6 mb-6 md:grid-cols-2 py-8 px-4 mx-auto max-w-2xl lg:py-16  ">
-    <div>
-            
-        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">MAC Address</label>
-        <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mac Address" required />
-    </div>
-    
-
-<div class="flex items-center">
-<p ><mat-slide-toggle>Connect</mat-slide-toggle></p>
-
-</div>
-</div>
-
-
-    <div class="flex items-start mb-6">
-        <div class="flex items-center h-5">
-        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
-        </div>
-        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
-    </div>
-    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-</form>
-
-</section>
-
--->

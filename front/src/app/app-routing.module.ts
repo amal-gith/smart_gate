@@ -7,6 +7,10 @@ import { AddusersComponent } from './addusers/addusers.component';
 //import { AddDeviceComponent } from './adddevices/adddevices.component';
 import { DevicesComponent } from './devices/devices.component';
 import { AdddevicesComponent } from './adddevices/adddevices.component';
+import { CardComponent } from './card/card.component';
+import { CpuComponent } from './cpu/cpu.component';
+import { EnergyComponent } from './energy/energy.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   
@@ -18,7 +22,11 @@ const routes: Routes = [
   {path: 'users',component:UsersComponent },
   {path:'addusers',component:AddusersComponent},
   {path:'adddevices',component:AdddevicesComponent},
-  {path:'devices',component:DevicesComponent}
+  {path:'devices',component:DevicesComponent},
+  {path:'card',component:CardComponent},
+  {path:'cpu',component:CpuComponent},
+  {path:'energy',component:EnergyComponent},
+  {path:'details',component:DetailsComponent}
 
 ];
 
